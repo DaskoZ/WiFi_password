@@ -33,9 +33,11 @@ if __name__ == '__main__':
     if platform.system() == 'Windows':
         with open('./WiFi_passwords.txt', 'a') as f:
             f.write(str(get_wifi_pass_win())+'\n\n')
+            print(f'Successfully saved to "{os.getcwd()}"')
             
     elif platform.system() == 'Linux':
         with open('./Wifi_passwords.txt', 'a') as f:
             f.write(str(get_wifi_pass_lin())+'\n\n')
+            print(f'Successfully saved to "{os.getcwd()}"')
     else:
         print('Platform not supported!')
